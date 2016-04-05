@@ -35,7 +35,7 @@ The code should be setup to run everything, without having to change any file pa
 \noindent
 The first file of importance is "conf.h" (located in /src/conf). Make sure that \textbf{NAVDEBUG} is set to 1, and then that the appropriate outputs (such as RNX) are enabled. Note that LOGAPT is set to 0 regardless of selection. \\ \\
 \noindent
-The second file of importance is "conf\_swc.h" (located in /src/conf). This is where you will give the input/output file paths. Even though \textbf{APTOUT} was disabled in "conf.h" the file path needs to be defined here too, as it will actually specify the \textit{input} path to the existing APT file. \textbf{KMLOUT} and \textbf{RNXOUT} will specify the output paths of the KML file and RNX binaries. Note that the input file name of \textbf{APTOUT} has to use the \_\%d\_\%d naming convention, or the code will bug (described in more detail in section \ref{sec:prob0} of this document). \\ \\ 
+The second file of importance is "conf\_swc.h" (located in /src/conf). This is where you will give the input/output file paths. Even though \textbf{APTOUT} was disabled in "conf.h" the file path needs to be defined here too, as it will actually specify the \textit{input} path to the existing APT file. \textbf{KMLOUT} and \textbf{RNXOUT} will specify the output paths of the KML file and RNX binaries. Note that in the code the input file name of \textbf{APTOUT} has to use the \_\%d\_\%d naming convention, or the code will bug (described in more detail in section \ref{sec:prob0} of this document). The actual file has to use the \_0\_0 naming, though.  \\ \\ 
 \noindent
 Included in the folder is also an APT binary needed to run the code.
 
